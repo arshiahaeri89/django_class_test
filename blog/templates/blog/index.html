@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'blog/index.css' %}">
+{% endblock %}
+
+
+{% block title %}
+    My Site
+{% endblock %}
+
+
+{% block content %}
+    <section id="welcome">
+        <header>
+            <img src="{% static 'blog/images/python.jpeg' %}" alt="Python">
+            <h2>My Site</h2>
+        </header>
+        <p>Hello My Name is Haeri, I am Developer.</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>Latest Posts</h2>
+        <ul>
+            {% for post in posts %}
+                {% include 'blog/includes/post.html' %}
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>Explanation About The Site</h2>
+        <p>The Site Includes the Training of the Most Popular Programing Languages.</p>
+        <p>Languages are such: Python, HTML, Java, C++, JvaScript</p>
+    </section>
+{% endblock %}
+
+
+{% block footer %}
+
+{% endblock %}

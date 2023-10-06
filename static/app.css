@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: sans-serif;
+    font-weight: bold;
+}
